@@ -1,9 +1,9 @@
 
 exports.up = function(knex, Promise) {
    // define our users table
- return knex.schema.createTable('users', usersTBL => {
-    usersTBL.increments(); // auto increments id
-    usersTBL.string('name', 128)
+ return knex.schema.createTable('users', table => {
+    table.increments(); // auto increments id
+    table.string('name', 128)
     .notNullable()
 });
 };
